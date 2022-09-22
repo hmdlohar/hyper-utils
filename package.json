@@ -1,6 +1,6 @@
 {
-  "name": "@hmdlohar/hyper-utils",
-  "version": "1.0.0",
+  "name": "hyper-utils",
+  "version": "1.1.1",
   "description": "Util functions for hyper lib",
   "source": "src/index.ts",
   "main": "dist/main.js",
@@ -9,14 +9,21 @@
   "scripts": {
     "dev": "parcel watch",
     "build": "parcel build",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "publish": "npm publish --access public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmdlohar/hyper-utils",
+    "directory": ""
+  },
   "devDependencies": {
     "@parcel/packager-ts": "^2.7.0",
     "@parcel/transformer-typescript-types": "^2.7.0",
+    "@types/node": "^18.7.18",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "eslint": "^8.23.1",
@@ -26,6 +33,10 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.3",
+    "querystring": "^0.2.1",
+    "sweetalert2": "^11.4.33",
     "typescript": "^4.2.4"
   }
 }
