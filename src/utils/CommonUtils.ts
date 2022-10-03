@@ -39,7 +39,7 @@ class CommonUtils {
   }
 
   static getBase64FromDataURI(str = "") {
-    let index = str?.indexOf(";base64,");
+    const index = str?.indexOf(";base64,");
     return str.substr(index + ";base64,".length);
   }
 
@@ -64,7 +64,7 @@ class CommonUtils {
   }
 
   static convertAryToObj(ary: string[], value: any = "") {
-    let obj: any = {};
+    const obj: any = {};
     ary.forEach((item) => (obj[item] = value));
     return obj;
   }
@@ -84,11 +84,11 @@ class CommonUtils {
     return str ? str.toUpperCase() : "";
   }
 
-  static getLastChars(str: string, lastDigit: number = 4) {
+  static getLastChars(str: string, lastDigit = 4) {
     return str?.substr(str.length - lastDigit, lastDigit) || "";
   }
 
-  static toFixedNumber(n: any, decimal: number = 3) {
+  static toFixedNumber(n: any, decimal = 3) {
     if (parseFloat(n)) {
       return parseFloat(parseFloat(n).toFixed(decimal));
     }
@@ -116,7 +116,7 @@ class CommonUtils {
   }
 
   static htmlToText(myHTML: string) {
-    let strippedHtml = myHTML.replace(/<[^>]+>/g, "");
+    const strippedHtml = myHTML.replace(/<[^>]+>/g, "");
     return strippedHtml;
   }
 

@@ -5,3 +5,4 @@ export { default as CommonUtils } from "./utils/CommonUtils";
 export { default as LocalStorageUtils } from "./utils/LocalStorageUtils";
 export { default as ServerUtils } from "./utils/ServerUtils";
 export { default as parseErrorString } from "./utils/parseErrorString";
+export { default as prettyPrice } from "./utils/prettyPrice";

@@ -8,7 +8,7 @@ class HttpServiceFetch {
     type: string,
     data = undefined
   ) {
-    let objReq: any = {
+    const objReq: any = {
       url,
       method: type,
       headers,
@@ -30,7 +30,7 @@ class HttpServiceFetch {
   }
 
   static handleError(ex: any) {
-    let newEx = new Error(parseErrorString(ex));
+    const newEx = new Error(parseErrorString(ex));
     //@ts-ignore
     newEx.ex = ex;
     throw newEx;
@@ -46,7 +46,7 @@ class HttpServiceFetch {
   static async get(url: string, headers = {}) {
     try {
       const axios = (await import("axios")).default;
-      let data = await axios(this.createJqReq(url, headers, "GET"));
+      const data = await axios(this.createJqReq(url, headers, "GET"));
       return this.handleSuccess(data);
     } catch (ex) {
       this.handleError(ex);
@@ -57,7 +57,7 @@ class HttpServiceFetch {
     headers = { "Content-Type": "application/json", ...headers };
     try {
       const axios = (await import("axios")).default;
-      let responseData = await axios(
+      const responseData = await axios(
         this.createJqReq(url, headers, "POST", data)
       );
       return this.handleSuccess(responseData);
@@ -70,7 +70,7 @@ class HttpServiceFetch {
     headers = { "Content-Type": "application/json", ...headers };
     try {
       const axios = (await import("axios")).default;
-      let responseData = await axios(
+      const responseData = await axios(
         this.createJqReq(url, headers, "PUT", data)
       );
       return this.handleSuccess(responseData);
@@ -83,7 +83,7 @@ class HttpServiceFetch {
     headers = { "Content-Type": "application/json", ...headers };
     try {
       const axios = (await import("axios")).default;
-      let responseData = await axios(
+      const responseData = await axios(
         this.createJqReq(url, headers, "DELETE", data)
       );
       return this.handleSuccess(responseData);

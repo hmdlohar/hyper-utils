@@ -3,7 +3,7 @@ export class LocalStorageUtilsService {
   lsGetObject(key: string) {
     try {
       if (typeof localStorage === "undefined") return null;
-      let item = localStorage.getItem(key);
+      const item = localStorage.getItem(key);
       if (item) {
         return JSON.parse(item);
       }
@@ -20,12 +20,12 @@ export class LocalStorageUtilsService {
   lsGet(key: string) {
     try {
       if (typeof localStorage === "undefined") return null;
-      let str = localStorage.getItem(key);
+      const str = localStorage.getItem(key);
       if (!str) return null;
-      var lsValue = JSON.parse(str);
+      const lsValue = JSON.parse(str);
       if (!lsValue) return null;
 
-      var lso = new LocalStorageObject(lsValue.value, lsValue.expireDateTime);
+      const lso = new LocalStorageObject(lsValue.value, lsValue.expireDateTime);
       if (lso.isExpired()) {
         localStorage.removeItem(key);
         return null;
@@ -42,7 +42,7 @@ export class LocalStorageUtilsService {
   }
 
   lsSet(key: string, item: any, expireDateOrExpireAfterInMinutes = null) {
-    var expiryDate: any = new Date(2100, 0, 1, 0, 0, 0); // By Default It will expire on Year 2100
+    let expiryDate: any = new Date(2100, 0, 1, 0, 0, 0); // By Default It will expire on Year 2100
     if (typeof expireDateOrExpireAfterInMinutes === "number")
       expiryDate = new Date(
         Date.now() + expireDateOrExpireAfterInMinutes * 60 * 1000
@@ -54,7 +54,7 @@ export class LocalStorageUtilsService {
         expiryDate = new Date(expireDateOrExpireAfterInMinutes || "");
       } catch (ex) {}
     }
-    var lso = new LocalStorageObject(item, expiryDate);
+    const lso = new LocalStorageObject(item, expiryDate);
 
     localStorage.setItem(key, lso.toObject());
   }

@@ -28,15 +28,15 @@ class AlertUtils {
         // return swal("Unknown Error: Message must be string", "error")
       }
 
-      let title = "";
-      let message = msg;
+      const title = "";
+      const message = msg;
       let icon = "info";
 
       if (ALERT_TYPE.SUCCESS === type) icon = "success";
       if (ALERT_TYPE.ERROR === type) icon = "error";
       if (ALERT_TYPE.INFO === type) icon = "info";
       if (ALERT_TYPE.WARNING === type) icon = "warning";
-      let options = {
+      const options = {
         icon: icon,
         title: title,
         timer: option.timeout,
@@ -78,7 +78,7 @@ class AlertUtils {
   ) {
     const swal = await this.getSWAL();
     return new Promise((resolve) => {
-      let options = {
+      const options = {
         title,
         icon,
         showDenyButton: false,
