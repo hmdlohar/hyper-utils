@@ -49,22 +49,22 @@ class AlertUtils {
       return new Promise((resolve) => resolve({}));
     }
   }
-  static async showInfo(msg: any, options: any) {
+  static async showInfo(msg: any, options?: any) {
     // this.snackbarError(msg)
     this.showAlert(msg, ALERT_TYPE.INFO, options);
   }
 
-  static async showError(msg: any, options: any) {
+  static async showError(msg: any, options?: any) {
     // this.snackbarError(msg)
     this.showAlert(msg, ALERT_TYPE.ERROR, options);
   }
 
-  static async showWarning(msg: any, options: any) {
+  static async showWarning(msg: any, options?: any) {
     // this.snackbarWarning(msg)
     this.showAlert(msg, ALERT_TYPE.WARNING, options);
   }
 
-  static async showSuccess(msg: any, options: any) {
+  static async showSuccess(msg: any, options?: any) {
     // this.snackbarSuccess(msg)
     this.showAlert(msg, ALERT_TYPE.SUCCESS, options);
   }

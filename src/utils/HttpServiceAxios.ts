@@ -30,10 +30,11 @@ class HttpServiceFetch {
   }
 
   static handleError(ex: any) {
-    const newEx = new Error(parseErrorString(ex));
-    //@ts-ignore
-    newEx.ex = ex;
-    throw newEx;
+    // const newEx = new Error(parseErrorString(ex));
+    // //@ts-ignore
+    // newEx.ex = ex;
+    // throw newEx;
+    throw ex;
   }
 
   static handleSuccess(data: any) {

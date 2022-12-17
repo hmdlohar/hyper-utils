@@ -40,7 +40,8 @@ class CommonUtils {
 
   static getBase64FromDataURI(str = "") {
     const index = str?.indexOf(";base64,");
-    return str.substr(index + ";base64,".length);
+    if (index > 0) return str.substr(index + ";base64,".length);
+    return str;
   }
 
   static readDataURIFromFile(file: File): Promise<string> {

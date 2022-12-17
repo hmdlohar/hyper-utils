@@ -8,5 +8,5 @@ export default function parseErrorString(error: any) {
   if (typeof error.message === "string") {
     return error.message;
   }
-  return error.toStrign();
+  return error.toString();
 }
