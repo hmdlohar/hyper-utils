@@ -1,6 +1,6 @@
 {
   "name": "hyper-utils",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Util functions for hyper lib",
   "source": "src/index.ts",
   "main": "dist/main.js",

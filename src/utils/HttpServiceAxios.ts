@@ -1,7 +1,6 @@
-import { parseErrorString } from "./parseErrorString";
 import qs from "querystring";
 
-class HttpServiceFetch {
+export class HttpServiceAxios {
   static createJqReq(
     url: string,
     headers: any,
@@ -93,5 +92,3 @@ class HttpServiceFetch {
     }
   }
 }
-
-export default HttpServiceFetch;

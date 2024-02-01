@@ -98,5 +98,4 @@ export class LocalStorageObject {
   }
 }
 
-const lsu = new LocalStorageUtilsService();
-export default lsu;
+export const LocalStorageUtils = new LocalStorageUtilsService();

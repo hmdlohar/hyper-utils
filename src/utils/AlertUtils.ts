@@ -5,7 +5,7 @@ export const ALERT_TYPE = {
   INFO: "INFO",
   WARNING: "WARNING",
 };
-class AlertUtils {
+export class AlertUtils {
   static swal = null;
   static async getSWAL() {
     try {
@@ -96,4 +96,4 @@ class AlertUtils {
   }
 }
 
-export default AlertUtils;
+
