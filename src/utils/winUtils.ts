@@ -5,8 +5,7 @@ export function getWindwo() {
 
 export function setWindow(key: string, value: any) {
   if (typeof window === "undefined") return null;
-  // @ts-ignore
-  window[key] = value;
+  (window as any)[key] = value;
   return true;
 }
 

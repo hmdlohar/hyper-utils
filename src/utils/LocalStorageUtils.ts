@@ -52,7 +52,9 @@ export class LocalStorageUtilsService {
     else if (typeof expireDateOrExpireAfterInMinutes === "string") {
       try {
         expiryDate = new Date(expireDateOrExpireAfterInMinutes || "");
-      } catch (ex) {}
+      } catch (ex) {
+        // Do Nothing
+      }
     }
     const lso = new LocalStorageObject(item, expiryDate);
 
