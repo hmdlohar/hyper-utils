@@ -1,6 +1,6 @@
 import qs from "querystring";
 
-class CommonUtils {
+export class CommonUtils {
   static isMobile() {
     return window.innerWidth <= 600;
   }
@@ -104,6 +104,7 @@ class CommonUtils {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/ban-types
   static askForFile(options: {} = {}): Promise<FileList | null> {
     return new Promise((resolve, reject) => {
       const input = document.createElement("input");
@@ -126,5 +127,3 @@ class CommonUtils {
     return "";
   }
 }
-
-export default CommonUtils;

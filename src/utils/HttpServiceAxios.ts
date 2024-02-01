@@ -1,4 +1,4 @@
-import parseErrorString from "./parseErrorString";
+import { parseErrorString } from "./parseErrorString";
 import qs from "querystring";
 
 class HttpServiceFetch {

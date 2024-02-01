@@ -1,4 +1,4 @@
-import parseErrorString from "./parseErrorString";
+import { parseErrorString } from "./parseErrorString";
 export const ALERT_TYPE = {
   SUCCESS: "SUCCESS",
   ERROR: "ERROR",

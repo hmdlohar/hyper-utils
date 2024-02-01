@@ -3,7 +3,7 @@ const intlObj = new Intl.NumberFormat("en-IN", {
   style: "currency",
   currency: "INR",
 });
-export default function prettyPrice(number: any) {
+export function prettyPrice(number: any) {
   //   if (Number.isNaN(Number(number))) return "";
   return intlObj.format(number);
 }

@@ -1,4 +1,4 @@
-class ServerUtils {
+export class ServerUtils {
   static resError(err: any, message = "") {
     return {
       resType: "THT",
@@ -18,4 +18,3 @@ class ServerUtils {
     } as any;
   }
 }
-export default ServerUtils;
